@@ -1,0 +1,35 @@
+/*
+ * Layout
+ */
+
+.navbar {
+  background-color: #fff;
+  justify-content: space-between;
+}
+.nav > li > a {
+  color: #000000;
+}
+#nav_item_1:hover {
+  background-color: transparent;
+}
+#nav_item_2:hover {
+  background-color: transparent;
+}
+#nav_item_3:hover {
+  background-color: transparent;
+}
+#nav_item_1 {
+  padding-right: 25px;
+  font-weight: 600;
+}
+#nav_item_2 {
+  padding-right: 25px;
+  font-weight: 600;
+}
+#nav_item_3 {
+  padding-right: 25px;
+  font-weight: 600;
+}
+.navbar-right {
+  margin-right: 0px !important;
+}

@@ -1,0 +1,547 @@
+/*!
+ * Primitive UI | MIT License
+ *
+ * A minimalist front-end design toolkit built with Sass for developing
+ * responsive, browser-consistent web apps.
+ *
+ * Author: Tania Rascia <tania@taniarascia.com>
+ * Source: https://github.com/taniarascia/primitive
+ * Documentation: https://taniarascia.github.io/primitive
+ */
+
+//==============================================================================
+// Configuration
+//==============================================================================
+
+@import 'base/variables';
+@import 'base/mixins';
+
+//==============================================================================
+// Reset
+//==============================================================================
+
+@import 'base/sanitize';
+@import 'base/reset';
+
+//==============================================================================
+// Components
+//==============================================================================
+
+@import 'components/scaffolding';
+@import 'components/grid';
+@import 'components/helpers';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/tables';
+@import 'components/navigation';
+@import 'components/layout';
+@import 'components/typography';
+
+.app {
+  display: inline-block;
+  padding: 15px 0px;
+  text-decoration: none !important;
+  font-weight: 600;
+  color: $black;
+}
+
+.app_image {
+  height: 25px;
+  width: auto;
+  margin-left: 10px;
+}
+
+.order_food {
+  height: 25px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.banner {
+  min-height: calc(100vh - 35vh);
+  background-image: linear-gradient(
+      to bottom,
+      rgba($black, 0.4),
+      rgba($black, 0.5)
+    ),
+    url('../images/bg.jpg');
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  padding: 1rem;
+}
+
+.create_account {
+  color: $white;
+  text-decoration: none !important;
+  border: 2px solid $white;
+  border-radius: 2px;
+  padding: 10px 10px;
+  margin-right: 24px;
+  border-radius: 4px;
+}
+
+.create_account:hover {
+  color: $white;
+}
+
+.log_in {
+  color: $white;
+  text-decoration: none !important;
+  margin: auto 20px;
+}
+
+.log_in:hover {
+  color: $white;
+}
+
+.bg_image {
+  width: 100%;
+  position: absolute;
+  /* max-height: 105%; */
+  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+}
+
+.nav2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.search-restaurant {
+  position: relative;
+  display: inline-block;
+}
+
+.zomato_logo {
+  position: relative;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-top: 8%;
+}
+
+.tag_line {
+  color: $white;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.dropdown {
+  margin-right: 0.5rem;
+}
+
+.find_restaurants {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-restaurant {
+  max-width: 100%;
+  width: 30%;
+  margin-right: 1rem;
+  display: flex;
+}
+
+.caret {
+  float: right;
+  margin-top: 8px;
+}
+
+.btn-danger {
+  z-index: 2;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  justify-content: space-around;
+}
+
+.box-left {
+  padding-top: 0.7rem;
+  margin-right: 3rem;
+}
+
+.search-del {
+  display: inline-block !important;
+  width: 82%;
+}
+
+.localities {
+  h2 {
+    margin: 0 5rem !important;
+  }
+
+  p {
+    margin: 0 5rem !important;
+  }
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery_form {
+  border: 1px solid $gray;
+  border-radius: 5px;
+  background-color: $white;
+  height: 50%;
+  padding: 0px 10px 20px 10px;
+}
+
+.btn-primary.btn-sm {
+  padding: 6px 10px;
+  margin-top: -4px;
+}
+
+.order-btn {
+  color: $white;
+  background-color: $green !important;
+  margin-top: 10px;
+}
+
+.order-btn:hover {
+  color: $white !important;
+}
+
+.detect-btn {
+  color: $black !important;
+  background-color: $white !important;
+  border-color: $gray !important;
+}
+
+.collections {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.card-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: '. .' '. .';
+}
+
+.card {
+  border: 1px solid $gray;
+  background-color: $white;
+  border-radius: 5px;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+.categories {
+  margin: 5rem;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  padding: 0;
+
+  img {
+    width: 50px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.mini-cards {
+  flex-direction: column;
+  max-width: 136px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-thumbnail {
+  border-radius: 0px !important;
+  padding: 0px !important;
+  min-height: 135px;
+}
+
+.card-body {
+  padding: 0px 20px 0px 0px;
+}
+
+.all-collections {
+  color: $red;
+  background-color: $white;
+  padding: 20px;
+  text-align: center;
+  margin: 0 1rem 0 0;
+  border-radius: 4px;
+  border: 1px solid $gray;
+}
+
+.location-container {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.quick-search {
+  background-color: $white;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid $gray;
+}
+
+.search-images {
+  height: 60px;
+  float: left;
+}
+
+span.search-text {
+  display: block !important;
+  font-weight: 600;
+  text-align: center;
+}
+
+.locations-list {
+  background-color: $white;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid $gray;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. . .';
+  margin: 2rem 5rem;
+}
+
+ul.locality-list {
+  list-style-type: none;
+  margin-bottom: -10px;
+  padding-left: 0px;
+  line-height: 2;
+}
+
+.get-app {
+  display: flex;
+  background: $white;
+  margin: 5rem;
+  padding: 2rem 0;
+  justify-content: space-evenly;
+}
+
+.form-container {
+  margin: 2rem 0;
+}
+
+.app-stores {
+  display: flex;
+  flex-direction: row;
+
+  a:first-child {
+    margin-right: 2rem;
+
+    img {
+      width: 250px;
+      height: auto;
+    }
+  }
+}
+
+.iPhone {
+  img {
+    height: 600px;
+  }
+}
+
+.line {
+  border: 2px solid rgba(192, 190, 190, 0.555);
+  width: 100%;
+  height: 2px;
+}
+
+.or-container {
+  display: flex;
+  margin: 1rem;
+}
+
+.btn-green {
+  min-width: 150px;
+  margin-left: 1rem;
+}
+
+.get-app-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats {
+  margin: 32px 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats .stat-list {
+  padding: 0 !important;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stats .value,
+.stats .label {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1em;
+  color: $light-gray;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.stats .label {
+  font-size: 1rem;
+}
+
+.footer-wrapper {
+  background-color: $light-black;
+  padding: 10px 30px 10px 30px;
+  color: $white;
+
+  h4 {
+    color: $white;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.social-container {
+  display: flex;
+
+  li {
+    padding-right: 12px;
+    list-style: none;
+  }
+}
+
+.social-container li a {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: #cdcdcd;
+}
+
+.language-selector {
+  width: 160px;
+  background-color: $light-black !important;
+  color: $white !important;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul.last-footer {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  li {
+    margin-right: 1rem;
+  }
+}
+
+.footer-last {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_column-top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .column-left {
+    flex-direction: row;
+    display: flex;
+    flex: 50%;
+    justify-content: space-around;
+  }
+
+  .column-right {
+    flex-direction: row;
+    display: flex;
+    flex: 50%;
+    justify-content: space-around;
+
+    .column-rl {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column-rr {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      margin: auto 0;
+    }
+  }
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+.share_icons {
+  float: right;
+}
+
+.share_icons img {
+  height: 30px;
+  padding: 0px 10px;
+}
+
+.ad {
+  background-color: $white;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid $gray;
+  width: 95.9%;
+  margin-left: 30px;
+  margin-top: 50px;
+}

@@ -1,0 +1,160 @@
+/**
+ * Layout
+ */
+
+@media only screen and (max-width: 1200px) {
+  .footer_column-top {
+    flex-direction: column !important;
+  }
+
+  .second-section {
+    flex-direction: column !important;
+  }
+
+  .box-left {
+    margin-right: 0 !important;
+  }
+
+  .box-right {
+    margin-top: 2rem;
+  }
+
+  .get-app {
+    flex-direction: column;
+
+    .iPhone {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      img {
+        width: 50%;
+        height: auto;
+        margin: 0 auto !important;
+      }
+    }
+
+    .get-app-content {
+      margin: 0 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    ul.nav-list {
+      flex-direction: column;
+
+      li:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .find_restaurants {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dropdown {
+      margin: 1rem 0 !important;
+      min-width: 200px;
+
+      button {
+        min-width: 200px;
+      }
+
+      .dropdown-menu {
+        min-width: 200px;
+      }
+    }
+
+    .search-restaurant {
+      min-width: 200px;
+      width: 100%;
+      margin: 0 !important;
+    }
+
+    .btn-danger {
+      min-width: 200px;
+      margin-top: 1rem;
+    }
+
+    .second-section {
+      flex-direction: column !important;
+
+      .box-left {
+        min-width: 100% !important;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: '.' '.' '.' '.';
+      }
+
+      .box-right {
+        margin-top: 2rem;
+        min-width: 100% !important;
+
+        .location-form {
+          min-width: 100% !important;
+
+          input {
+            width: 100%;
+          }
+
+          .btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .categories {
+      margin: 3rem !important;
+
+      .category-list {
+        flex-wrap: wrap;
+      }
+    }
+
+    .localities {
+      h2 {
+        margin: 3rem !important;
+      }
+
+      p {
+        margin: 3rem !important;
+      }
+
+      .locations-list {
+        display: flex !important;
+        flex-direction: column;
+
+        ul {
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    .get-app-content {
+      margin: 3rem;
+
+      .or-container {
+        p {
+          width: 55px;
+        }
+      }
+
+      .app-stores {
+        img {
+          width: 250px;
+          height: 70px;
+        }
+
+        img:first-child {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
